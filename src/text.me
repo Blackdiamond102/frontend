@@ -1,0 +1,31 @@
+APP.JS
+
+function BigText({text, color}){
+  return <h1 style={{color: color}}>{text}</h1>
+}
+
+function SmallText(){
+  return <small>this is a small text</small>
+}
+
+export default BigText
+export {SmallText}
+
+
+INDEX.JS
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+import BigText from "./App"
+import { SmallText } from './App';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+   <BigText text="hello world 1" color="green"/>
+   <BigText text="hello world 2" color="yellow"/>
+  </React.StrictMode>
+);
