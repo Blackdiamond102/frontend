@@ -22,7 +22,7 @@ function CreateArticle() {
         form.append("description", post)
         form.append("user", user.id)
 
-        axios.post("http://localhost:8000/createarticle/", form)
+        axios.post("https://blackdiamond102.pythonanywhere.com/createarticle/", form)
         .then((res) => {
           navigate("/")
           alert("success")

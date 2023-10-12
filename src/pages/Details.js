@@ -11,7 +11,7 @@ function Details() {
 
 
     useEffect(() => {
-      axios.get(`http://localhost:8000/getarticle/${id}`)
+      axios.get(`https://blackdiamond102.pythonanywhere.com/getarticle/${id}`)
       .then((res) => setSite(res.data))
       .catch((err) => console.log(err))
 
@@ -23,8 +23,8 @@ function Details() {
         <div className="text-primary fs-italic" dangerouslySetInnerHTML={{
           __html: site?.description
         }}></div>
-        <img className='w-25 h-25 ' src={`http://localhost:8000/${site?.image}`} alt={site?.title} /> 
-        <img className='w-25 h-25 ' src={`http://localhost:8000/${site?.other}`} alt={site?.title} /> 
+        <img className='w-25 h-25 ' src={`https://blackdiamond102.pythonanywhere.com/${site?.image}`} alt={site?.title} /> 
+        <img className='w-25 h-25 ' src={`https://blackdiamond102.pythonanywhere.com/${site?.other}`} alt={site?.title} /> 
     </div>
   )
 }

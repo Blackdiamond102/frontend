@@ -14,7 +14,7 @@ function Login() {
 
     let form = new FormData(e.currentTarget)
 
-    await axios.post("http://localhost:8000/login/", form)
+    await axios.post("https://blackdiamond102.pythonanywhere.com/login/", form)
       .then((res) => {
         localStorage.setItem("user", JSON.stringify(res.data));
         alert("login successful")
